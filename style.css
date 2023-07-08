@@ -1,0 +1,78 @@
+
+body{
+    margin: 0;
+    background-color: rgba(26, 34, 50, 1);
+}
+
+/* CSS start Here */
+/* ====NAVBAR START==== */
+nav{
+    height: 64px;
+    background: var(--surface-glass, rgba(31, 41, 61, 0.70));
+    /* Blur / Glass */
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+nav img{
+    width: 48px;
+    height: 48px;
+}
+nav button{
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #FF8036 0%, #FC6D19 100%);
+    box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
+    font-family: 'PT Sans';
+    color: white;
+}
+
+/* ====NAVBAR END==== */
+
+/* ====MAIN START==== */
+main{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+main .main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main .main-header h1{
+    font-family: 'PT Sans';
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #FFF;
+}
+main .main-content{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 16px;
+   
+}
+main .main-content .movie{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+main .main-content .movie img{
+    width: 100%;
+}
+main .main-content .movie h2,h3{
+    color: white;
+    font-family: 'PT Sans';
+    margin: 0;
+    font-size: 4vw;
+}
+main .main-content .movie h3{
+    color: var(--text-muted, #637394);
+    font-size: 3.73vw;
+    font-weight: 400;
+}
