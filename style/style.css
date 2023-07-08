@@ -75,6 +75,12 @@ main .main-content .movie img{
     border-radius: 8px;
     width: 100%;
     margin-bottom: 8px;
+    transition: ease-in-out 0.2s
+}
+main .main-content .movie img:hover{
+    width: 105%;
+    transform: rotate(2deg);
+    
 }
 main .main-content .movie h2,h3{
     color: white;
