@@ -67,7 +67,7 @@ main .main-content .movie{
 }
 main .main-content .movie img{
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 8px;
 }
 main .main-content .movie h2,h3{
