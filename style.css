@@ -89,20 +89,24 @@ main .main-content .movie h3{
         grid-template-columns: 30.6% 30.6% 30.6%;
     }
     main .main-content .movie h2{
-        font-size: 24px;
+        font-size: 3.4vw;
     }
     main .main-content .movie h3{
-        font-size: 18px;
+        font-size: 2.8vw;
     }
 }
 @media only screen and (min-width: 1200px){
+    main{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
     main .main-content{
         grid-template-columns: 22% 22% 22% 22%;
     }
     main .main-content .movie h2{
-        font-size: 28px;
+        font-size: 1.6vw;
     }
     main .main-content .movie h3{
-        font-size: 24px;
+        font-size: 1.4vw;
     }
 }
