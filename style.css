@@ -7,6 +7,7 @@ body{
 /* CSS start Here */
 /* ====NAVBAR START==== */
 nav{
+    width: 100vw;
     height: 64px;
     background: var(--surface-glass, rgba(31, 41, 61, 0.70));
     /* Blur / Glass */
@@ -30,11 +31,13 @@ nav button{
     font-family: 'PT Sans';
     color: white;
 }
-
 /* ====NAVBAR END==== */
 
 /* ====MAIN START==== */
 main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     margin-left: 16px;
     margin-right: 16px;
 }
@@ -54,8 +57,7 @@ main .main-header h1{
 main .main-content{
     display: grid;
     grid-template-columns: 48% 48%;
-    gap: 16px;
-   
+    gap: 4%;
 }
 main .main-content .movie{
     display: flex;
@@ -73,6 +75,31 @@ main .main-content .movie h2,h3{
 }
 main .main-content .movie h3{
     color: var(--text-muted, #637394);
-    font-size: 3.73vw;
+    font-size: 3.7vw;
     font-weight: 400;
+}
+
+
+/* Responsive media query */
+@media only screen and (min-width: 992px) {
+    main .main-content{
+        grid-template-columns: 30.6% 30.6% 30.6%;
+    }
+    main .main-content .movie h2{
+        font-size: 24px;
+    }
+    main .main-content .movie h3{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    main .main-content{
+        grid-template-columns: 22% 22% 22% 22%;
+    }
+    main .main-content .movie h2{
+        font-size: 28px;
+    }
+    main .main-content .movie h3{
+        font-size: 24px;
+    }
 }
