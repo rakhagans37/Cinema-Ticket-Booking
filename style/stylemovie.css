@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: var(--background-main, #1A2232);
+    font-family: 'PT Sans';
+}
+
+/* ====HEADER START==== */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+header h1{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+/* ====HEADER END==== */
+
+/* ====MAIN START==== */
+main{
+    display: flex;
+    flex-direction: column;
+}
+main .main-header{
+    border-bottom: 2px solid rgba(255, 128, 54, 1);
+}
+main .main-header h2{
+    color: var(--primary-main, #FF8036);
+    text-align: center;
+    /* Shadow/Primary Text */
+    text-shadow: 0px 0px 16px 0px rgba(255, 128, 54, 0.50);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

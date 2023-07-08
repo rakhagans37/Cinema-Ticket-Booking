@@ -2,6 +2,7 @@
 body{
     margin: 0;
     background-color: rgba(26, 34, 50, 1);
+    font-family: 'PT Sans';
 }
 
 /* CSS start Here */
@@ -28,8 +29,10 @@ nav button{
     border-radius: 8px;
     background: linear-gradient(180deg, #FF8036 0%, #FC6D19 100%);
     box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
-    font-family: 'PT Sans';
     color: white;
+}
+nav button:hover{
+    background: linear-gradient(180deg, #ff8a47 0%, #fa7427 100%);
 }
 /* ====NAVBAR END==== */
 
@@ -47,7 +50,6 @@ main .main-header{
     justify-content: space-between;
 }
 main .main-header h1{
-    font-family: 'PT Sans';
     font-size: 1.5em;
     font-style: normal;
     font-weight: 500;
@@ -57,7 +59,7 @@ main .main-header h1{
 main .main-content{
     display: grid;
     grid-template-columns: 48% 48%;
-    gap: 4%;
+    gap: 4vw;
 }
 main .main-content .movie{
     text-decoration: none;
@@ -76,7 +78,6 @@ main .main-content .movie img{
 }
 main .main-content .movie h2,h3{
     color: white;
-    font-family: 'PT Sans';
     margin: 0;
     font-size: 4vw;
 }
