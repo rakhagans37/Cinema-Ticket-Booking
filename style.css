@@ -63,9 +63,10 @@ main .main-content .movie{
     display: flex;
     flex-direction: column;
     gap: 2px;
+    border-radius: 8px;
 }
 main .main-content .movie img{
-    width: 100%;
+    width: 90%;
 }
 main .main-content .movie h2,h3{
     color: white;
