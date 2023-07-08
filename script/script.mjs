@@ -4,11 +4,12 @@ ajax.onload = () => {
    const json = JSON.parse(ajax.responseText);
 
    for (let i = 0; i <= 5; i++) {
-      const createDiv = document.createElement("div");
+      const createDiv = document.createElement("a");
       const createImage = document.createElement("img");
       const createHeader = document.createElement("h2");
       const createHeader3 = document.createElement("h3");
 
+      createDiv.href = "#";
       createDiv.className = "movie";
       createImage.src = json[i].poster_url;
       createHeader.textContent = json[i].title;

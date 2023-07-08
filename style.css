@@ -60,6 +60,7 @@ main .main-content{
     gap: 4%;
 }
 main .main-content .movie{
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 2px;
