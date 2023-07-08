@@ -81,7 +81,7 @@ main .main-content .movie h3{
 
 
 /* Responsive media query */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     main .main-content{
         grid-template-columns: 30.6% 30.6% 30.6%;
     }
