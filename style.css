@@ -66,6 +66,9 @@ main .main-content .movie{
     gap: 2px;
     border-radius: 8px;
 }
+main .main-content .movie:hover{
+    text-decoration: underline;
+}
 main .main-content .movie img{
     border-radius: 8px;
     width: 100%;
