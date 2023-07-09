@@ -22,7 +22,7 @@ header h1{
 main{
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 main .main-header{
     border-bottom: 2px solid rgba(255, 128, 54, 1);
@@ -123,6 +123,9 @@ main #description-details{
     main #main-image{
         width: 35vw;
     }
+    header h1#movie-title{
+        font-size: 4vw;
+    }
 }
 @media only screen and (max-width: 600px) {
     main #background-image{
@@ -144,6 +147,9 @@ main #description-details{
     main #movie-description p{
         font-size: 18px;
     }
+    header h1#movie-title{
+        font-size: 5vw;
+    }
 }
 
 /* ===MAIN END=== */
@@ -162,7 +168,7 @@ footer{
 }
 footer button{
     width: 60%;
-    height: 80%;
+    height: 70%;
     border-radius: 12px;
     border: none;
     background: var(--primary-gradient, linear-gradient(180deg, #FF8036 0%, #FC6D19 100%));
