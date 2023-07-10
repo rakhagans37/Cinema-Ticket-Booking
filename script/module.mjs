@@ -32,5 +32,6 @@ export class masterCard extends paymentMethod {
       this.logo = "../img/Mastercard.png";
    }
 }
-
-localStorage.setItem("account", JSON.stringify(new nonLogUser()));
+if (localStorage.length === 0) {
+   localStorage.setItem("account", JSON.stringify(new nonLogUser()));
+}

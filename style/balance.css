@@ -42,6 +42,7 @@ main #balance-value{
     align-items: center;
     gap: 10px;
 }
+
 main #balance-value img{
     height: 80%;
 }
@@ -88,6 +89,19 @@ main div.card-value div.card-value-number{
     flex-direction: row;
     align-items: center;
     gap: 8px;
+}
+div.topup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 4px;
+    border: 2px solid var(--border-main, rgba(109, 158, 255, 0.10));
+}
+main #topup{
+    text-decoration: none;
+    color: white;
 }
 main #payment-method-collection{
     display: flex;

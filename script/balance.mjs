@@ -1,15 +1,14 @@
 import { masterCard, visa } from "./module.mjs";
 
 const accountJson = JSON.parse(localStorage.getItem("account"));
-const balanceValue = document.getElementById("balance-value");
+const balanceValue = document.getElementById("balance-nominal-value");
 const createP = document.createElement("p");
 
 console.log(accountJson);
 document.getElementById("balance-title").textContent =
    accountJson.loginStatus == false ? "My Balance" : "account.name";
 
-createP.textContent = `Rp. ${accountJson.balance.toLocaleString()}`;
-balanceValue.appendChild(createP);
+balanceValue.textContent = `Rp. ${accountJson.balance.toLocaleString()}`;
 
 for (let i = 0; i <= accountJson.paymentMethod.length; i++) {
    const parrent = document.getElementById("payment-method-collection");
