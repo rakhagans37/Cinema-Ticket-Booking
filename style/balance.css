@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    background-color: var(--background-main, #1A2232);
+    font-family: 'PT Sans';
+}
+
+/* ====HEADER START==== */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    background:rgba(31, 41, 61, 0.7);
+}
+header h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+/* ====HEADER END==== */
+
+/* ====MAIN START==== */
+main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 10px;
+}
+main .balance-nominal h2{
+    color: var(--text-muted, #637394);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+main #balance-value{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    height: 60px;
+    border-radius: 8px;
+    align-items: center;
+    gap: 10px;
+}
+main #balance-value img{
+    height: 80%;
+}
+main #balance-value p{
+    color: var(--text-main, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+main .card-value{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    height: 60px;
+    border-radius: 8px;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--surface-main, #1F293D);
+    justify-content: space-between;
+}
+main .card-value-number img{
+    padding-left: 8px;
+    height: 48px;
+}
+main .card-value p{
+    color: var(--text-main, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+main p.card-value-date{
+    justify-items: end;
+    color: var(--text-muted, #637394);  
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-right: 10px;
+}
+main div.card-value div.card-value-number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+main #payment-method-collection{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+main #balance-nominal #payment-method{
+    margin-top: 10px;
+    width:70%;
+    height: 60px;
+    border-radius: 8px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--border-main, rgba(109, 158, 255, 0.10));
+    color: var(--text-main, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    main .card-value{
+        width: 85%;
+        height: 55px;
+        height: 55px;
+    }
+    main #balance-nominal button#payment-method{
+        width: 85%;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    main .card-value{
+        width: 90%;
+        height: 55px;
+        height: 55px;
+    }
+    main #balance-nominal button#payment-method{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    main .card-value{
+        width: 100%;
+        height: 55px;
+        height: 55px;
+    }
+    main #balance-nominal button#payment-method{
+        width: 100%;
+    }
+    main .balance-nominal h2{
+        font-size: 20px;
+    }
+    main .card-value p{
+        font-size: 18px;
+    }
+    main p.card-value-date{
+        font-size: 16px;
+    }
+    main #balance-value p{
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

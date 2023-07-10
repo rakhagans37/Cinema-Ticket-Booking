@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Cinema</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/balance.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="../script/balance.mjs"></script>
+    <header>
+        <h1 id="balance-title"></h1>
+    </header>
+    <main>
+        <div class="balance-nominal" id="balance-nominal">
+            <h2>Your Balance</h2>
+            <div id="balance-value">
+                <img src="../img/wallet.png" alt="">
+            </div>
+            <h2>Payment Information</h2>
+            <div id="payment-method-collection"></div>
+            <button id="payment-method">Add New Payment Method</button>
+        </div>
+    </main>
+    <footer>  
+    </footer>
+    <script type="module" src="../script/balance.mjs"></script>
 </body>
 </html>

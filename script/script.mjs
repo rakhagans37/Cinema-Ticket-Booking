@@ -27,3 +27,4 @@ ajax.onload = () => {
 export const accountJson = JSON.parse(localStorage.getItem("account"));
 document.getElementById("balance-nominal").textContent =
    "Rp. " + accountJson.balance.toLocaleString();
+console.log(accountJson);
