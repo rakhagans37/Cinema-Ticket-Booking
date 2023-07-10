@@ -3,8 +3,6 @@ import { masterCard, visa } from "./module.mjs";
 const accountJson = JSON.parse(localStorage.getItem("account"));
 const balanceValue = document.getElementById("balance-value");
 const createP = document.createElement("p");
-accountJson.paymentMethod.push(new visa("0100 0100 0100 0100", "03/07"));
-accountJson.paymentMethod.push(new masterCard("0100 0100 0100 0100", "03/07"));
 
 console.log(accountJson);
 document.getElementById("balance-title").textContent =
