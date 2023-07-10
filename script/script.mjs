@@ -23,3 +23,7 @@ ajax.onload = () => {
       createDiv.appendChild(createHeader3);
    }
 };
+
+export const accountJson = JSON.parse(localStorage.getItem("account"));
+document.getElementById("balance-nominal").textContent =
+   "Rp. " + accountJson.balance.toLocaleString();

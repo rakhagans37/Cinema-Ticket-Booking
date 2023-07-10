@@ -34,6 +34,24 @@ nav button{
 nav button:hover{
     background: linear-gradient(180deg, #ff8a47 0%, #fa7427 100%);
 }
+nav .merk{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+nav .merk p{
+    color: white;
+    font-weight: bold;
+}
+nav .balance{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+nav .balance p{
+    color: white;
+    font-weight: bold;
+}
 /* ====NAVBAR END==== */
 
 /* ====MAIN START==== */
