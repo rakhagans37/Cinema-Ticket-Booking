@@ -1,4 +1,4 @@
-import { masterCard, visa } from "./module.mjs";
+import { gopay, ovo } from "./module.mjs";
 
 const accountJson = JSON.parse(localStorage.getItem("account"));
 const balanceValue = document.getElementById("balance-nominal-value");

@@ -16,3 +16,20 @@ document
 
       window.location = "balance.html";
    });
+
+function closePopUp() {
+   const form = document.getElementById("input-payment");
+   form.style.display = "none";
+}
+function openPopUp() {
+   const form = document.getElementById("input-payment");
+   form.style.display = "flex";
+}
+function addPayment() {
+   let json = JSON.parse(localStorage.getItem("account"));
+   if (json.loginStatus === true) {
+      alert("Anda harus login terlebih dahulu");
+   } else {
+      openPopUp();
+   }
+}

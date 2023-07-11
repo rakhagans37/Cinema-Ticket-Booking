@@ -125,6 +125,91 @@ main #balance-nominal #payment-method{
     line-height: normal;
 }
 
+form{
+    border:2px solid #1F293D;
+    background-color: #1A2232;
+    width: 70vw;
+    height: 60vh;
+    display: none;
+    flex-direction: column;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    gap: 10px;
+}
+div#payment-radio{
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 160px;
+    background-color:#1F293D;
+    border-radius: 8px;
+    gap: 10px;
+}
+div#payment-radio .radio-child{
+    display: flex;
+    width: 95%;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--border-main, rgba(109, 158, 255, 0.10));
+}
+div#payment-radio .radio-child label{
+    width: 100%;
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: bold;
+    color: white;
+}
+div#payment-radio .radio-child label:hover{
+    background-color:#1A2232;
+}
+div#nomor-container{
+    width: 70%;
+}
+div#nomor-container input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-main, rgba(109, 158, 255, 0.10));
+}
+div#nomor-container input[type="text"]{
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+div.button-input{
+    width: 70%;
+}
+div.button-input button{
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary-gradient, linear-gradient(180deg, #FF8036 0%, #FC6D19 100%));
+    /* Shadow/Primary */
+    box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
+}
+
+form#input-payment button.close{
+    background-color: transparent;
+    border: none;
+}
+form#input-payment button.close img{
+    width: 20px;
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
     main .card-value{
@@ -174,10 +259,3 @@ main #balance-nominal #payment-method{
         font-size: 18px;
     }
 }
-
-
-
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}

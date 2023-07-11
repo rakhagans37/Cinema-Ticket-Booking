@@ -22,15 +22,46 @@
                 <div class="topup">
                     <a href="topup.html" id="topup">Top Up</a>
                 </div>
-                
             </div>
             <h2>Payment Information</h2>
             <div id="payment-method-collection"></div>
-            <button id="payment-method">Add New Payment Method</button>
+            <button id="payment-method" onclick="addPayment()">Add New Payment Method</button>
+
+            <form id="input-payment">
+                <button class="close" onclick="closePopUp()"><img src="../img/close.png" alt=""></button>
+                <div id="payment-radio">
+                    <div class="radio-child">
+                        <label for="gopay">
+                            <input type="radio" value="gopay" id="gopay" name="payment-method-choose">
+                            Gopay
+                        </label>
+                    </div>
+                    <div class="radio-child">
+                        <label for="ovo">
+                            <input type="radio" value="ovo" id="ovo" name="payment-method-choose">
+                            Ovo
+                        </label>
+                    </div>
+                    <div class="radio-child">
+                        <label for="dana">
+                            <input type="radio" value="dana" id="dana" name="payment-method-choose">
+                            Dana
+                        </label>
+                    </div>
+                </div>
+                <div class="nomor-container" id="nomor-container">
+                    <label for="nomor"></label>
+                    <input type="text" id="nomor" placeholder="Masukkan nomor Anda Disini" required>
+                </div>
+                <div class="button-input">
+                    <button id="submit">Add Payment Method</button>
+                </div>
+            </form>
         </div>
     </main>
     <footer>  
     </footer>
+    <script src="../script/script.js"></script>
     <script type="module" src="../script/balance.mjs"></script>
 </body>
 </html>

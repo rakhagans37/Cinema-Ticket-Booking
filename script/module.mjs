@@ -11,24 +11,32 @@ export class nonLogUser {
       this.paymentMethod = [];
    }
 }
-
-class paymentMethod {
-   constructor(paymentNumber, paymentDate) {
-      this.paymentNumber = paymentNumber;
-      this.paymentDate = paymentDate;
+export class logUser {
+   static id = 0;
+   loginStatus = true;
+   constructor() {
+      this.id += 1;
+      this.orderHistory = [];
+      this.paymentMethod = [];
    }
 }
-export class visa extends paymentMethod {
-   constructor(paymentNumber, paymentDate) {
-      super(paymentNumber, paymentDate);
-      this.method = "Visa";
+
+class paymentMethod {
+   constructor(paymentNumber) {
+      this.paymentNumber = paymentNumber;
+   }
+}
+export class gopay extends paymentMethod {
+   constructor(paymentNumber) {
+      super(paymentNumber);
+      this.method = "Gopay";
       this.logo = "../img/Visa.png";
    }
 }
-export class masterCard extends paymentMethod {
-   constructor(paymentNumber, paymentDate) {
-      super(paymentNumber, paymentDate);
-      this.method = "Mastercard";
+export class ovo extends paymentMethod {
+   constructor(paymentNumber) {
+      super(paymentNumber);
+      this.method = "Ovo";
       this.logo = "../img/Mastercard.png";
    }
 }
