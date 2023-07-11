@@ -14,7 +14,7 @@ function openPopUp() {
 }
 function addPayment() {
    let json = JSON.parse(localStorage.getItem("account"));
-   if (json.loginStatus === true) {
+   if (json.loginStatus === false) {
       alert("Anda harus login terlebih dahulu");
    } else {
       openPopUp();
