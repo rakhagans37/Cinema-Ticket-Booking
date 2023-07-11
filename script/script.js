@@ -4,32 +4,6 @@ function chooseMovie(movieID) {
    window.location = "page/movie.html";
 }
 
-document
-   .getElementById("input-nominal")
-   .addEventListener("submit", function (event) {
-      event.preventDefault();
-      let nominal = Number(document.getElementById("nominal").value);
-      let json = JSON.parse(localStorage.getItem("account"));
-
-      json.balance += nominal;
-      localStorage.setItem("account", JSON.stringify(json));
-
-      window.location = "balance.html";
-   });
-
-document
-   .getElementById("input-nominal2")
-   .addEventListener("submit", function (event) {
-      event.preventDefault();
-      let nominal = Number(document.getElementById("nominal2").value);
-      let json = JSON.parse(localStorage.getItem("account"));
-
-      json.balance += nominal;
-      localStorage.setItem("account", JSON.stringify(json));
-
-      window.location = "balance.html";
-   });
-
 function closePopUp() {
    const form = document.getElementById("input-payment");
    form.style.display = "none";
@@ -45,4 +19,20 @@ function addPayment() {
    } else {
       openPopUp();
    }
+}
+
+function confirmPayment() {
+   let nominal = Number(
+      document.getElementById("total").textContent.replace("Rp. ", "")
+   );
+   let json = JSON.parse(localStorage.getItem("account"));
+
+   json.balance += nominal;
+   localStorage.setItem("account", JSON.stringify(json));
+
+   window.location = "balance.html";
+}
+
+function cancelPayment() {
+   document.getElementById("section").style.display = "None";
 }

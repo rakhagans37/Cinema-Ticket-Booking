@@ -18,19 +18,19 @@
             <div id="payment-radio" class="payment-radio">
                 <div class="radio-child">
                     <label for="gopay">
-                        <input type="radio" value="gopay" id="gopay" name="payment-method-choose" required >
+                        <input type="radio" value="Gopay" id="gopay" name="payment-method-choose" required >
                         gopay
                     </label>
                 </div>
                 <div class="radio-child">
                     <label for="ovo">
-                        <input type="radio" value="ovo" id="ovo" name="payment-method-choose" required>
+                        <input type="radio" value="Ovo" id="ovo" name="payment-method-choose" required>
                         Ovo
                     </label>
                 </div>
                 <div class="radio-child">
                     <label for="dana">
-                        <input type="radio" value="dana" id="dana" name="payment-method-choose" required>
+                        <input type="radio" value="Dana" id="dana" name="payment-method-choose" required>
                         Dana
                     </label>
                 </div>
@@ -50,10 +50,6 @@
         <form id="input-nominal2" style="display: none;">
             <div id="payment-radio2" class="payment-radio">
                 <div class="radio-child">
-                    <label for="awikwook">
-                        <input type="radio" value="awikwook" id="awikwook" name="payment-method-choose" required >
-                        gopay
-                    </label>
                 </div>
             </div>
             <div class="nominal-container" id="nominal-container">
@@ -65,6 +61,30 @@
             </div>
         </form>
     </main>
+    <section style="display: none;" id="section">
+        <div class="confirm-payment">
+            <span>
+                <h2>Confirm Payment</h2>
+            </span>
+            <div class="method">
+                <h3>Payments Method</h3>
+                <p id="payment-number"></p>
+                <p id="payment-id"></p>
+            </div>
+            <div class="details">
+                <p class="desc">Tanggal</p><p id="tanggal-payment"></p>
+                <p class="desc">Waktu</p><p id="waktu-payment"></p>
+                <p class="desc">Jumlah</p><p id="jumlah"></p>
+                <p class="desc">Pajak</p><p>0%</p>
+                <p class="desc">Diskon</p><p>0%</p>
+                <p class="desc-utama">Total Pembayaran</p><p id="total"></p>
+            </div>
+            <div class="button-pay">
+                <button id="cancel-payment" onclick="cancelPayment()">CANCEL</button>
+                <button id="confirm-payment" onclick="confirmPayment()">PAY NOW</button>
+            </div>
+        </div>
+    </section>
     <script src="../script/script.js"></script>
     <script type="module" src="../script/topup.mjs"></script>
 </body>

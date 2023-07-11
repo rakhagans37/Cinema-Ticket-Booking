@@ -4,7 +4,7 @@ console.log(localStorage.getItem("account"));
 
 const json = JSON.parse(localStorage.getItem("account"));
 
-if (json.loginStatus === true) {
+if (json.loginStatus === false) {
    document.getElementById("input-nominal").style.display = "flex";
 } else {
    document.getElementById("input-nominal2").style.display = "flex";
@@ -51,3 +51,50 @@ function printSavedPayment() {
       parent.appendChild(createDiv);
    }
 }
+
+document
+   .getElementById("input-nominal")
+   .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const tanggal = new Date();
+      const method =
+         document.getElementById("gopay").checked == true
+            ? document.getElementById("gopay").value
+            : document.getElementById("ovo").checked == true
+            ? document.getElementById("ovo").value
+            : document.getElementById("dana").value;
+      const jumlah = document.getElementById("nominal").value;
+      const nomor = document.getElementById("nomor").value;
+
+      document.getElementById("section").style.display = "block";
+      document.getElementById(
+         "payment-number"
+      ).textContent = `${method} ${nomor}`;
+      document.getElementById("payment-id").textContent = `Payment id : #${
+         method.substr(0, 1) +
+         nomor.substr(1, 6) +
+         tanggal.toISOString().substring(0, 4) +
+         jumlah
+      }`;
+      document.getElementById(
+         "tanggal-payment"
+      ).textContent = `${tanggal.toLocaleDateString()}`;
+      document.getElementById(
+         "waktu-payment"
+      ).textContent = `${tanggal.getHours()}:${tanggal.getMinutes()} WIB`;
+      document.getElementById("jumlah").textContent = `Rp. ${jumlah}`;
+      document.getElementById("total").textContent = `Rp. ${jumlah}`;
+   });
+
+document
+   .getElementById("input-nominal2")
+   .addEventListener("submit", function (event) {
+      event.preventDefault();
+      let nominal = Number(document.getElementById("nominal2").value);
+      let json = JSON.parse(localStorage.getItem("account"));
+
+      json.balance += nominal;
+      localStorage.setItem("account", JSON.stringify(json));
+
+      window.location = "balance.html";
+   });
