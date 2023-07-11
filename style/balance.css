@@ -217,6 +217,10 @@ div.history{
     flex-direction: column;
     gap: 8px;
 }
+div.history p{
+    font-size: 18px;
+    color:#fcfcfc
+}
 div.historyChild{
     display: flex;
     flex-direction: row;
@@ -235,6 +239,7 @@ div.historyDetail{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 5px;
 }
 div.historyDetail h3{
     color: var(--text-main, #FFF);

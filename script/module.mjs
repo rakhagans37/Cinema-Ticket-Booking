@@ -40,7 +40,6 @@ export class ovo extends paymentMethod {
       this.logo = "../img/Mastercard.png";
    }
 }
-
 if (localStorage.length === 0) {
    localStorage.setItem("account", JSON.stringify(new nonLogUser()));
 }

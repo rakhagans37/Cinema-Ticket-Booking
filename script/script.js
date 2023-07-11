@@ -1,3 +1,12 @@
+class historyTopUp {
+   constructor(date, totalTopUp) {
+      this.image = "../img/income.png";
+      this.title = "Top Up";
+      this.date = date;
+      this.totalTopUp = totalTopUp;
+   }
+}
+
 function chooseMovie(movieID) {
    console.log(movieID);
    localStorage.setItem("movieID", movieID);
@@ -28,6 +37,7 @@ function confirmPayment() {
    let json = JSON.parse(localStorage.getItem("account"));
 
    json.balance += nominal;
+   json.orderHistory.push(new historyTopUp(new Date(), nominal));
    localStorage.setItem("account", JSON.stringify(json));
 
    window.location = "balance.html";
