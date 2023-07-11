@@ -17,6 +17,19 @@ document
       window.location = "balance.html";
    });
 
+document
+   .getElementById("input-nominal2")
+   .addEventListener("submit", function (event) {
+      event.preventDefault();
+      let nominal = Number(document.getElementById("nominal2").value);
+      let json = JSON.parse(localStorage.getItem("account"));
+
+      json.balance += nominal;
+      localStorage.setItem("account", JSON.stringify(json));
+
+      window.location = "balance.html";
+   });
+
 function closePopUp() {
    const form = document.getElementById("input-payment");
    form.style.display = "none";

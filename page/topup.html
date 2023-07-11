@@ -14,10 +14,51 @@
         <h1>Top Up</h1>
     </header>
     <main>
-        <form id="input-nominal">
+        <form id="input-nominal" style="display: none;">
+            <div id="payment-radio" class="payment-radio">
+                <div class="radio-child">
+                    <label for="gopay">
+                        <input type="radio" value="gopay" id="gopay" name="payment-method-choose" required >
+                        gopay
+                    </label>
+                </div>
+                <div class="radio-child">
+                    <label for="ovo">
+                        <input type="radio" value="ovo" id="ovo" name="payment-method-choose" required>
+                        Ovo
+                    </label>
+                </div>
+                <div class="radio-child">
+                    <label for="dana">
+                        <input type="radio" value="dana" id="dana" name="payment-method-choose" required>
+                        Dana
+                    </label>
+                </div>
+            </div>
+            <div class="nomor-container" id="nomor-container">
+                <label for="nomor"></label>
+                <input type="text" id="nomor" placeholder="Masukkan nomor Anda Disini" required>
+            </div>
             <div class="nominal-container" id="nominal-container">
                 <label for="nominal"></label>
-                <input type="text" id="nominal" placeholder="Masukkan Nominal Anda Disini" required>
+                <input type="text" id="nominal" placeholder="Masukkan Nominal Top Up Anda Disini" required>
+            </div>
+            <div class="button-input">
+                <button id="submit">Top Up</button>
+            </div>
+        </form>
+        <form id="input-nominal2" style="display: none;">
+            <div id="payment-radio2" class="payment-radio">
+                <div class="radio-child">
+                    <label for="awikwook">
+                        <input type="radio" value="awikwook" id="awikwook" name="payment-method-choose" required >
+                        gopay
+                    </label>
+                </div>
+            </div>
+            <div class="nominal-container" id="nominal-container">
+                <label for="nominal"></label>
+                <input type="text" id="nominal2" placeholder="Masukkan Nominal Top Up Anda Disini" required>
             </div>
             <div class="button-input">
                 <button id="submit">Top Up</button>

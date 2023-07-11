@@ -25,7 +25,7 @@ main{
     grid-template-columns: 60% 40%;
     margin: 10px;
 }
-main .balance-nominal h2{
+main h2{
     color: var(--text-muted, #637394);
     font-size: 24px;
     font-style: normal;
@@ -210,6 +210,53 @@ form#input-payment button.close{
 form#input-payment button.close img{
     width: 20px;
 }
+
+/* ====History==== */
+div.history{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+div.historyChild{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 154px;
+    background: var(--surface-main, #1F293D);
+    border-radius: 8px;
+    gap: 15px;
+}
+div.historyChild img{
+    width: 100px;
+    padding-left: 8px;
+}
+div.historyDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.historyDetail h3{
+    color: var(--text-main, #FFF);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+}
+div.historyDetail p{
+    margin: 2px;
+    color: var(--text-main, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+div.historyDetail p:last-child{
+    color: #637394;
+    font-size: 18px;
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
     main .card-value{
@@ -220,16 +267,42 @@ form#input-payment button.close img{
     main #balance-nominal button#payment-method{
         width: 85%;
     }
+    div#payment-radio .radio-child label{
+        font-size: 22px;
+    }
+    div.historyDetail h3{
+        font-size: 20px;
+    }
+    div.historyDetail p{
+        font-size: 18px;
+    }
+    div.historyDetail p:last-child{
+        font-size: 16px;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
     main .card-value{
-        width: 90%;
+        width: 100%;
         height: 55px;
         height: 55px;
     }
     main #balance-nominal button#payment-method{
-        width: 90%;
+        width: 100%;
+    }
+    div#payment-radio .radio-child label{
+        font-size: 20px;
+    }
+    form{
+        width: 85vw;
+        height: 54vh;
+    }
+    div.historyChild{
+        width: 100%;
     }
 }
 
@@ -257,5 +330,12 @@ form#input-payment button.close img{
     }
     main #balance-value p{
         font-size: 18px;
+    }
+    div#payment-radio .radio-child label{
+        font-size: 18px;
+    }
+    form{
+        width: 90vw;
+        height: 50vh;
     }
 }
