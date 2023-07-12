@@ -40,6 +40,15 @@ export class ovo extends paymentMethod {
       this.logo = "../img/Mastercard.png";
    }
 }
+
+export class dana extends paymentMethod {
+   constructor(paymentNumber) {
+      super(paymentNumber);
+      this.method = "Dana";
+      this.logo = "../img/Mastercard.png";
+   }
+}
+
 if (localStorage.length === 0) {
    localStorage.setItem("account", JSON.stringify(new nonLogUser()));
 }

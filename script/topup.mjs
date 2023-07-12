@@ -3,7 +3,6 @@ import { gopay } from "../script/module.mjs";
 console.log(localStorage.getItem("account"));
 
 const json = JSON.parse(localStorage.getItem("account"));
-
 if (json.loginStatus === false) {
    document.getElementById("input-nominal").style.display = "flex";
 } else {
@@ -20,14 +19,15 @@ function printSavedPayment() {
          const createInput = document.createElement("input");
 
          createDiv.className = "radio-child";
-         createLabel.setAttribute("for", `${json.paymentMethod[i].method}`);
+         createLabel.setAttribute("for", `${json.paymentMethod[i].method}${i}`);
          createInput.setAttribute("type", "radio");
          createInput.setAttribute("value", `${i}`);
          createInput.setAttribute("id", `${i}`);
-         createInput.setAttribute("name", "payment-method-choose");
+         createInput.setAttribute("name", "payment-method-choosen");
+         createInput.setAttribute("required", "");
 
          createLabel.appendChild(createInput);
-         createLabel.textContent += json.paymentMethod[i].paymentNumber;
+         createLabel.innerHTML += json.paymentMethod[i].paymentNumber;
          createDiv.appendChild(createLabel);
          parent.appendChild(createDiv);
       }
@@ -84,17 +84,4 @@ document
       ).textContent = `${tanggal.getHours()}:${tanggal.getMinutes()} WIB`;
       document.getElementById("jumlah").textContent = `Rp. ${jumlah}`;
       document.getElementById("total").textContent = `Rp. ${jumlah}`;
-   });
-
-document
-   .getElementById("input-nominal2")
-   .addEventListener("submit", function (event) {
-      event.preventDefault();
-      let nominal = Number(document.getElementById("nominal2").value);
-      let json = JSON.parse(localStorage.getItem("account"));
-
-      json.balance += nominal;
-      localStorage.setItem("account", JSON.stringify(json));
-
-      window.location = "balance.html";
    });

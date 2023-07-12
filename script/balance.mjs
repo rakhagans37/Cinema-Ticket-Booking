@@ -1,8 +1,7 @@
-import { gopay, ovo } from "./module.mjs";
+import { gopay, ovo, dana } from "./module.mjs";
 
 const accountJson = JSON.parse(localStorage.getItem("account"));
 const balanceValue = document.getElementById("balance-nominal-value");
-const createP = document.createElement("p");
 
 console.log(accountJson);
 document.getElementById("balance-title").textContent =
@@ -71,3 +70,23 @@ if (accountJson.orderHistory.length == 0) {
       DivParrent.appendChild(createDivParrent);
    }
 }
+
+document
+   .getElementById("input-payment")
+   .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const json = JSON.parse(localStorage.getItem("account"));
+      const paymentNumber = document.getElementById("nomor").value;
+
+      if (document.getElementById("gopay").checked == true) {
+         json.paymentMethod.push(new gopay(paymentNumber));
+      } else if (document.getElementById("ovo").checked == true) {
+         json.paymentMethod.push(new ovo(paymentNumber));
+      } else {
+         json.paymentMethod.push(new dana(paymentNumber));
+      }
+
+      localStorage.setItem("account", JSON.stringify(json));
+      window.location = "../page/balance.html";
+   });
