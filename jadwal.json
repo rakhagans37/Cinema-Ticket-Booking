@@ -1,0 +1,126 @@
+[
+    {
+        "studio" : "1",
+        "jadwal" : "9.00"
+    },
+    {
+        "studio" : "1",
+        "jadwal" : "12.00"
+    },
+    {
+        "studio" : "1",
+        "jadwal" : "15.00"
+    },
+    {
+        "studio" : "1",
+        "jadwal" : "17.00"
+    },
+    {
+        "studio" : "1",
+        "jadwal" : "19.00"
+    },
+    {
+        "studio" : "1",
+        "jadwal" : "21.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "9.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "11.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "13.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "16.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "18.00"
+    },
+    {
+        "studio" : "2",
+        "jadwal" : "20.00"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "9.00"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "11.30"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "14.00"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "16.00"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "18.00"
+    },
+    {
+        "studio" : "3",
+        "jadwal" : "20.15"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "9.00"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "11.30"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "14.00"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "15.55"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "18.05"
+    },
+    {
+        "studio" : "4",
+        "jadwal" : "20.20"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "9.00"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "11.10"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "13.20"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "15.45"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "17.10"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "19.35"
+    },
+    {
+        "studio" : "5",
+        "jadwal" : "21.50"
+    }
+]

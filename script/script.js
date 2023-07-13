@@ -1,3 +1,5 @@
+const totalChair = 0;
+const choosenChair = [];
 class historyTopUp {
    constructor(date, totalTopUp) {
       this.image = "../img/income.png";
