@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: var(--background-main, #1A2232);
+    font-family: 'PT Sans';
+}
+h2{
+    color: var(--text-main, #FFF);  
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;  
+}
+p.desc{
+    color: var(--text-muted, #637394);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+}
+p.value{
+    color: var(--text-main, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+}
+
+/* ====HEADER START==== */
+header{
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background:rgba(31, 41, 61, 0.7);
+}
+header h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+header img{
+    padding: 30px;
+    width: 40px;
+    justify-self: flex-start;
+}
+header div{
+    width: 100%;
+}
+/* ====HEADER END==== */
+
+/* ====MAIN START==== */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+div.ticket-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.qr{
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+div.qr img{
+    width: 240px;
+}
+div.details{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 40px;
+}
+div.ticket-details button{
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-gradient, linear-gradient(180deg, #FF8036 0%, #FC6D19 100%));
+    /* Shadow/Primary */
+    box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main{
+        justify-content: center;
+        height: 80vh;
+    }
+    div.container{
+        display: grid;
+        grid-template-columns: max-content 60vw;
+        gap: 40px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

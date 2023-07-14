@@ -1,4 +1,4 @@
-import { gopay, ovo, dana, ajax } from "./module.mjs";
+import { gopay, ovo, dana, ajax, filmSchedule } from "./module.mjs";
 
 const accountJson = JSON.parse(localStorage.getItem("account"));
 const balanceValue = document.getElementById("balance-nominal-value");
@@ -9,6 +9,7 @@ document.getElementById("balance-title").textContent =
 
 balanceValue.textContent = `Rp. ${accountJson.balance.toLocaleString()}`;
 
+console.log(localStorage);
 ajax.onload = () => {
    const json = JSON.parse(ajax.responseText);
 
@@ -79,6 +80,12 @@ ajax.onload = () => {
             createDivParrent.appendChild(createImage);
             createDivParrent.appendChild(createDivChild);
             createDivParrent.className = "historyChild";
+            createDivParrent.setAttribute(
+               "onclick",
+               `ticketDetails(${Number(
+                  accountJson.orderHistory[i].movieID
+               )}, ${Number(i)})`
+            );
             DivParrent.appendChild(createDivParrent);
          }
       }
