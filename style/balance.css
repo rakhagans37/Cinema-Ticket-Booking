@@ -97,12 +97,18 @@ main div.card-value div.card-value-number{
     align-items: center;
     gap: 8px;
 }
+div.button-topupandwd{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-left: 20px;
+}
 div.topup{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;
-    width: 100px;
+    width: 90px;
     border-radius: 4px;
     border: 2px solid var(--border-main, rgba(109, 158, 255, 0.10));
 }
@@ -316,6 +322,12 @@ div.historyDetail p:last-child{
     div.historyChild{
         width: 100%;
     }
+    div.button-topupandwd{
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        margin-left: 10vw;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -349,5 +361,19 @@ div.historyDetail p:last-child{
     form{
         width: 90vw;
         height: 50vh;
+    }
+    div.topup{
+        width: 65px;
+    }
+    main #topup, main #withdrawal{
+        font-size: 12px;
+        text-decoration: none;
+        color: white;
+    }
+    div.button-topupandwd{
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        margin-left: 1vw;
     }
 }
