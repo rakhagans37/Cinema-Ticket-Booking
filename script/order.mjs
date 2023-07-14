@@ -109,7 +109,7 @@ document
       });
       if (Date.parse(timeNow) > Date.parse(timeMovie) == true) {
          alert(
-            "Anda harus memesan tiket maksimal 15 menit sebelum tayang, silahkan cari film lain"
+            "Anda Tidak Dapat Memesan Tiket Ketika Film Telah Dimulai, Silahkan Cari Film Lain Yang Tersedia"
          );
       } else if (
          output.length !== 0 &&
