@@ -29,7 +29,8 @@ header .judul{
     flex-direction: column;
     justify-content: center;
 }
-header .judul p{    
+header .judul p#judul-film{
+    padding: 0;
     color: var(--text-muted, #637394);
     text-align: center;
     font-size: 14px;
@@ -62,6 +63,9 @@ div.waktu-child{
     border: 1px solid black;
     border-radius: 8px;
     border: 1px solid var(--border-main, rgba(109, 158, 255, 0.10));    
+}
+div.waktu-child p{
+    padding: 0;
 }
 div.waktu-child img{
     width: 24px;
@@ -218,6 +222,121 @@ div.screen img{
     width: 100%;
 }
 
+/* Section */
+div.confirm-payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color:#1F293D;
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+div#data{
+    justify-content: center;
+}
+div.confirm-payment span{
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-color: #283753;
+    color: white;
+}
+div.confirm-payment div h3,p{
+    margin: 0;
+    color: white;
+    padding-left: 30px;
+}
+div.confirm-payment p:last-child{
+    color: var(--text-muted, #637394);
+    font-weight: 500;
+}
+div.confirm-payment div{
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+div.confirm-payment div.details{
+    margin-top: 40px;
+    justify-content: start;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    border-radius: 8px;
+}
+div.confirm-payment div.details .desc{
+    color: var(--text-muted, #637394);
+}
+div.confirm-payment div.details p{
+    color:white;
+}
+div.confirm-payment div.details .desc-utama{
+    color: var(--text-muted, #637394);
+    font-size: 26px;
+}
+div.confirm-payment div.details p:last-child{
+    font-size: 26px;
+    font-weight: bold;
+}
+div.confirm-payment div.button-pay{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+button#cancel-payment{
+    color: white;
+    margin-right: 5px;
+    border-radius: 8px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid var(--border-main, rgba(109, 158, 255, 0.10));
+}
+button#confirm-payment{
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border-radius: 8px;
+    background: var(--primary-gradient, linear-gradient(180deg, #FF8036 0%, #FC6D19 100%));
+    /* Shadow/Primary */
+    box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
+    height: 50px;
+    border: 1px solid var(--border-main, rgba(109, 158, 255, 0.10));
+}
+
+form#confirm-data input{
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #637394;
+    border-radius: 8px;
+}
+form#confirm-data input[type="text"]{
+    padding-left: 5px;
+    color: white;
+}
+form#confirm-data input[type="number"]{
+    padding-left: 5px;
+    color: white;
+}
+section#section-data button.close{
+    background: transparent;
+    box-shadow: none;
+    
+}
+section#section-data button.close img{
+    width: 28px;
+    height: 28px;
+}
+
 @media only screen and (max-width: 600px) {
     main{
         overflow-x: scroll;
@@ -263,5 +382,20 @@ div.screen img{
     }
     div.description p{
         font-size: 16px;
+    }
+    div.confirm-payment{
+        width: 95vw;
+    }
+    div.confirm-payment div.details p{
+        font-size: 12px;
+        color:white;
+    }
+    div.confirm-payment div.details .desc-utama{
+        color: var(--text-muted, #637394);
+        font-size: 14px;
+    }
+    div.confirm-payment div.details p:last-child{
+        font-size: 14px;
+        font-weight: bold;
     }
 }

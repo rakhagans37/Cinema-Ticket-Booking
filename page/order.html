@@ -48,7 +48,7 @@
         <div class="screen">
             <img src="../img/Screen.png" alt="">
         </div>
-        <form action="" id="choose-chair">
+        <form action="" id="choose-chair" name="choose-chair">
             <div class="input-choose-chair">
                 <label class="container">
                     <input type="checkbox" value="A1" name="chair">
@@ -326,7 +326,47 @@
             
             <button id="submit">Order</button>
         </form>
+        <section id="section-data" style="display: none;">
+            <div class="confirm-payment" id="data">
+                <button class="close" onclick="closePopUp()"><img src="../img/close.png" alt=""></button>
+                <form action="" id="confirm-data">
+                    <label for="">
+                        <input type="text" id="name" placeholder="Masukkan Nama Anda" required>
+                    </label>
+                    <label for="">
+                        <input type="number" id="age" placeholder="Masukkan Umur Anda" required>
+                    </label>
+                    <button type="submit">Confirm Data</button>
+                </form>
+            </div>
+        </section>
+        <section id="section" style="display: none;">
+            <div class="confirm-payment">
+                <span>
+                    <h2>Confirm Payment</h2>
+                </span>
+                <div class="method">
+                    <h3>Bookings Film</h3>
+                    <p id="payment-number"></p>
+                    <p id="payment-id"></p>
+                </div>
+                <div class="details">
+                    <p class="desc">Tanggal</p><p id="tanggal-payment"></p>
+                    <p class="desc">Waktu</p><p id="waktu-payment"></p>
+                    <p class="desc">Jumlah</p><p id="jumlah"></p>
+                    <p class="desc">Pajak</p><p>0%</p>
+                    <p class="desc">Diskon</p><p>0%</p>
+                    <p class="desc">Chair</p><p id="chair"></p>
+                    <p class="desc-utama">Total Pembayaran</p><p id="total">Rp. 500,000</p>
+                </div>
+                <div class="button-pay">
+                    <button id="cancel-payment" onclick="cancelPayment()">CANCEL</button>
+                    <button id="confirm-payment" onclick="confirmPayment()">PAY NOW</button>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="../script/order.js"></script>
     <script type="module" src="../script/order.mjs"></script>
 </body>
 </html>
