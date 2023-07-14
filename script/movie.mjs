@@ -24,14 +24,19 @@ ajax.onload = function () {
 
       if (i == 1) {
          createH3.textContent = json[movieID].ticket_price.toLocaleString();
-         createP.textContent = "Ticket Price";
+         createP.textContent = "Harga Tiket";
       } else {
          if (json[movieID].age_rating < 13) {
-            createH3.textContent = "G";
+            createH3.textContent = `A ${json[movieID].age_rating}+`;
+         } else if (
+            json[movieID].age_rating >= 13 &&
+            json[movieID].age_rating < 18
+         ) {
+            createH3.textContent = `R ${json[movieID].age_rating}+`;
          } else {
-            createH3.textContent = "R 13+";
+            createH3.textContent = `D ${json[movieID].age_rating}+`;
          }
-         createP.textContent = "Age Rating";
+         createP.textContent = "Kategori Umur";
       }
 
       additionalInfo.appendChild(createDiv);
@@ -53,10 +58,13 @@ ajax.onload = function () {
          createP.textContent = "Kategori Usia";
          createPValue.className = "age ";
          if (json[movieID].age_rating < 13) {
-            createPValue.textContent = "G (SU)";
+            createPValue.textContent = `A ${json[movieID].age_rating}+`;
             createPValue.style.backgroundColor = "rgba(0, 255, 0, 0.384)";
+         } else if (json[movieID].age_rating >= 18) {
+            createPValue.textContent = `D ${json[movieID].age_rating}+`;
+            createPValue.style.backgroundColor = "rgba(255, 0, 0, 0.363)";
          } else {
-            createPValue.textContent = "R 13+";
+            createPValue.textContent = `R ${json[movieID].age_rating}+`;
             createPValue.style.backgroundColor = "rgba(255, 0, 0, 0.363)";
          }
       }

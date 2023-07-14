@@ -19,7 +19,10 @@ ajax.onload = () => {
       document.getElementById("history").append(createP);
    } else {
       for (let i = 0; i <= accountJson.orderHistory.length; i++) {
-         if (accountJson.orderHistory[i].type == "topup") {
+         if (
+            accountJson.orderHistory[i].type == "topup" ||
+            accountJson.orderHistory[i].type == "withdrawal"
+         ) {
             const DivParrent = document.getElementById("history");
             const createDivParrent = document.createElement("div");
             const createImage = document.createElement("img");
@@ -33,9 +36,15 @@ ajax.onload = () => {
             createPDate.textContent = accountJson.orderHistory[
                i
             ].date.substring(0, 10);
-            createPTotal.textContent = `Rp. ${accountJson.orderHistory[
-               i
-            ].totalTopUp.toLocaleString()}`;
+            if (accountJson.orderHistory[i].type == "topup") {
+               createPTotal.textContent = `Rp. ${accountJson.orderHistory[
+                  i
+               ].totalTopUp.toLocaleString()}`;
+            } else {
+               createPTotal.textContent = `Rp. ${accountJson.orderHistory[
+                  i
+               ].totalWithdrawal.toLocaleString()}`;
+            }
 
             createDivChild.appendChild(createH3);
             createDivChild.appendChild(createPDate);

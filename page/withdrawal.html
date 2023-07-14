@@ -13,7 +13,7 @@
     <header>
         <a href="../index.html"><img src="../img/Home.png" alt=""></a>
         <div>
-            <h1>Top Up</h1>
+            <h1>Withdrawal</h1>
         </div>
     </header>
     <main>
@@ -44,10 +44,10 @@
             </div>
             <div class="nominal-container" id="nominal-container">
                 <label for="nominal"></label>
-                <input type="text" id="nominal" placeholder="Masukkan Nominal Top Up Anda Disini" required>
+                <input type="text" id="nominal" placeholder="Masukkan Nominal Yang Ingin Ditarik" required>
             </div>
             <div class="button-input">
-                <button id="submit">Beli</button>
+                <button id="submit">Top Up</button>
             </div>
         </form>
         <form id="input-nominal2" style="display: none;">
@@ -65,28 +65,28 @@
     <section id="section" style="display: none;">
         <div class="confirm-payment">
             <span>
-                <h2>Konfirmasi Pembelian</h2>
+                <h2>Konfirmasi Penarikan</h2>
             </span>
             <div class="method">
-                <h3>Metode Pembayaran</h3>
+                <h3>Metode Penarikan</h3>
                 <p id="payment-number"></p>
                 <p id="payment-id"></p>
             </div>
             <div class="details">
                 <p class="desc">Tanggal</p><p id="tanggal-payment"></p>
                 <p class="desc">Waktu</p><p id="waktu-payment"></p>
-                <p class="desc">Jumlah</p><p id="jumlah"></p>
+                <p class="desc">Jumlah Ditarik</p><p id="jumlah"></p>
                 <p class="desc">Pajak</p><p>0%</p>
-                <p class="desc">Diskon</p><p>0%</p>
-                <p class="desc-utama">Total Pembayaran</p><p id="total"></p>
+                <p class="desc">Biaya Administrasi</p><p>Rp. 2000</p>
+                <p class="desc-utama">Jumlah Pembayaran</p><p id="total"></p>
             </div>
             <div class="button-pay">
                 <button id="cancel-payment" onclick="cancelPayment()">BATALKAN</button>
-                <button id="confirm-payment" onclick="confirmPayment()">BAYAR SEKARANG</button>
+                <button id="confirm-payment" onclick="confirmPayment()">TARIK SEKARANG</button>
             </div>
         </div>
     </section>
-    <script src="../script/script.js"></script>
-    <script type="module" src="../script/topup.mjs"></script>
+    <script src="../script/withdrawal.js"></script>
+    <script type="module" src="../script/withdrawal.mjs"></script>
 </body>
 </html>

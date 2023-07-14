@@ -8,7 +8,6 @@ body{
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 64px;
     background:rgba(31, 41, 61, 0.7);
 }
@@ -16,6 +15,13 @@ header h1{
     color: white;
     text-align: center;
     font-size: 2rem;
+}
+header img{
+    padding: 30px;
+    width: 40px;
+}
+header div{
+    width: 100%;
 }
 /* ====HEADER END==== */
 

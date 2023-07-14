@@ -74,7 +74,6 @@ function confirmPaymentPage(nama, chairChoosen) {
 
 function confirmData(chairChoosen) {
    document.getElementById("section-data").style.display = "block";
-
    document
       .getElementById("confirm-data")
       .addEventListener("submit", function (event) {
@@ -94,13 +93,28 @@ document
    .addEventListener("submit", function (event) {
       event.preventDefault();
 
+      let timeNow = new Date();
+      let timeMovie = new Date();
+      timeMovie.setHours(
+         Number(movieTime.substring(0, 2)),
+         Number(movieTime.substring(3, 5)),
+         0
+      );
       let checkboxes = document.querySelectorAll('input[name="chair"]:checked');
       let output = [];
+      console.log(Date.parse(timeNow) < Date.parse(timeMovie));
+
       checkboxes.forEach((checkbox) => {
          output.push(checkbox.value);
       });
-
-      if (output.length !== 0) {
+      if (Date.parse(timeNow) > Date.parse(timeMovie) == true) {
+         alert(
+            "Anda harus memesan tiket maksimal 15 menit sebelum tayang, silahkan cari film lain"
+         );
+      } else if (
+         output.length !== 0 &&
+         Date.parse(timeNow) < Date.parse(timeMovie) == true
+      ) {
          confirmData(output);
       }
    });
