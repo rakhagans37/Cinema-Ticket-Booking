@@ -29,6 +29,7 @@ function refund() {
       }
       jsonAccount.balance += price;
       jsonAccount.orderHistory.splice(orderHistoryIndex);
+      alert("Refund Berhasil");
    } else {
       alert("Permintaan Refund Gagal, Karena Telah Melewati Jam Tayang");
    }
@@ -36,7 +37,6 @@ function refund() {
    localStorage.setItem("account", JSON.stringify(jsonAccount));
    localStorage.setItem("BOOK", JSON.stringify(jsonBook));
    console.log(jsonBook);
-   alert("Refund Berhasil");
 
    window.location = "balance.html";
 }
