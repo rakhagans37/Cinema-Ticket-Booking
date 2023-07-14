@@ -110,6 +110,29 @@ main .main-content .movie h3{
     font-size: 3.7vw;
     font-weight: 400;
 }
+main .rating{
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 22px;
+    border-radius: 8px;
+    background: var(--primary-gradient, linear-gradient(180deg, #FF8036 0%, #FC6D19 100%));
+    
+    /* Shadow/Primary */
+    box-shadow: 0px 4px 16px 0px rgba(255, 128, 54, 0.25);
+}
+main .rating p{
+    color: var(--text-main, #FFF);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+    margin: 0;
+}
 
 
 /* Responsive media query */

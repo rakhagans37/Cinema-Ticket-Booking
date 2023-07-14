@@ -1,11 +1,12 @@
 class historyMovie {
-   constructor(studio, title, movieID, chair) {
+   constructor(studio, title, movieID, chair, totalPrice) {
       this.type = "movie";
       this.movieID = movieID;
       this.title = title;
       this.date = new Date();
       this.studio = studio;
       this.chair = chair;
+      this.totalPrice = totalPrice;
    }
 }
 
@@ -62,7 +63,9 @@ function confirmPayment() {
          book[`${movieID}`][date.toLocaleDateString()].push(chair[i]);
          localStorage.setItem("BOOK", JSON.stringify(book));
       }
-      json.orderHistory.push(new historyMovie(studio, title, movieID, chair));
+      json.orderHistory.push(
+         new historyMovie(studio, title, movieID, chair, nominal)
+      );
       localStorage.setItem("account", JSON.stringify(json));
       window.location = "balance.html";
    }

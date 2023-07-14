@@ -4,6 +4,8 @@ const jsonAccount = JSON.parse(localStorage.getItem("account"));
 const movieTicket = Number(localStorage.getItem("movieticket"));
 const orderHistoryIndex = Number(localStorage.getItem("localOrderHistory"));
 
+console.log(JSON.parse(localStorage.getItem("BOOK")));
+
 ajax.onload = () => {
    const json = JSON.parse(ajax.responseText);
 
@@ -21,7 +23,6 @@ ajax.onload = () => {
    const judulFilm = document.getElementById("judul-film");
    const studio = document.getElementById("studio");
    const movieDate = document.getElementById("movie-date");
-   const movieTime = document.getElementById("movie-time");
 
    judulFilm.textContent = json[movieTicket].title;
    studio.textContent = jsonAccount.orderHistory[orderHistoryIndex].studio;

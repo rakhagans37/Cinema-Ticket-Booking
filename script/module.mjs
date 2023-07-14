@@ -54,7 +54,7 @@ export class dana extends paymentMethod {
    }
 }
 
-if (localStorage.length === 0) {
+if (localStorage.length !== 0) {
    localStorage.setItem("account", JSON.stringify(new nonLogUser()));
 }
 
@@ -91,6 +91,6 @@ const movieBook = {
    29: {},
    30: {},
 };
-if ("BOOK" in localStorage === false) {
+if ("BOOK" in localStorage !== false) {
    localStorage.setItem("BOOK", JSON.stringify(movieBook));
 }
