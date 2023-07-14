@@ -1,10 +1,11 @@
 const totalChair = 0;
 const choosenChair = [];
 class historyTopUp {
-   constructor(date, totalTopUp) {
+   constructor(totalTopUp) {
+      this.type = "topup";
       this.image = "../img/income.png";
       this.title = "Top Up";
-      this.date = date;
+      this.date = new Date();
       this.totalTopUp = totalTopUp;
    }
 }
@@ -39,7 +40,7 @@ function confirmPayment() {
    let json = JSON.parse(localStorage.getItem("account"));
 
    json.balance += nominal;
-   json.orderHistory.push(new historyTopUp(new Date(), nominal));
+   json.orderHistory.push(new historyTopUp(nominal));
    localStorage.setItem("account", JSON.stringify(json));
 
    window.location = "balance.html";

@@ -102,10 +102,18 @@ div.waktu-child img{
     left: 0;
     height: 46px;
     width: 46px;
-    background-color: #eee;
     border-radius: 8px;
     background: var(--surface-deep, #253554);
-
+  }
+  .checkmark-disable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 46px;
+    width: 46px;
+    border-radius: 8px;
+    background: var(--primary-gradient, linear-gradient(180deg, #ba1919 0%, #ff0000 100%));
+    box-shadow: 0px 4px 16px 0px rgba(255, 0, 0, 0.25);
   }
   
   /* When the checkbox is checked, add a blue background */
@@ -177,7 +185,8 @@ div.occupied-logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--surface-deep, #253554);
+    background: var(--primary-gradient, linear-gradient(180deg, #ba1919 0%, #ff0000 100%));
+    box-shadow: 0px 4px 16px 0px rgba(255, 0, 0, 0.25);
     width: 28px;
     height: 28px;
     border-radius: 28px;
@@ -232,7 +241,7 @@ div.confirm-payment{
     left: 50%;
     transform: translate(-50%, -50%); 
     background-color:#1F293D;
-    height: 500px;
+    height: 550px;
     width: 600px;
     border-radius: 10px;
     overflow: hidden;
@@ -336,6 +345,12 @@ section#section-data button.close img{
     width: 28px;
     height: 28px;
 }
+main div.description p{
+    padding: 3px;
+}
+form#choose-chair p{
+    padding: 0;
+}
 
 @media only screen and (max-width: 600px) {
     main{
@@ -349,7 +364,11 @@ section#section-data button.close img{
     .checkmark {
         height: 32px;
         width: 32px;
-      }
+    }
+    .checkmark-disable{
+        height: 32px;
+        width: 32px;
+    }
     button{
         border: none;
         border-radius: 8px;
@@ -397,5 +416,5 @@ section#section-data button.close img{
     div.confirm-payment div.details p:last-child{
         font-size: 14px;
         font-weight: bold;
-    }
+    }   
 }
